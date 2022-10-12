@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+:root {
+  --branco: #fff;
+  --preto: #000;
+  --azul-escuro: #1e1e2c;
+  --lilas: #b19cd9;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html, body{
+  width: 100vw !important;
+}
+
+body{
+  background-color: var(--azul-escuro);
+}
+
+.card-about-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 10rem;
+
+  width: 50%;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  
+  background: rgba( 255, 255, 255, 0.05 );
+  box-shadow: 0 8px 60px 0 var(--lilas);
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+  animation: emergeLeft .5s linear;
+}
+
+.card-about-main span{
+  padding: 2rem;
+  flex-direction: row;
+  color: var(--lilas);
+  font: 600 bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#meteoro{
+  animation: float 3s infinite;
+}
+
+@keyframes emergeLeft{
+  0%{
+    transform: translateX(-500px);
+    opacity: 0;
+  } 100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float{
+	0%,100%{
+		transform:translatey(0)
+	} 50%{
+		transform:translatey(-20px)
+	}
+}
+
+@media screen and (max-width: 930px) {
+  .card-about-main{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 620px){
+  .card-about-main{
+    flex-direction: column;
+  }
+
+  .card-about-main span{
+    font-size: 1rem;
+    padding: 0;
+    padding-top: .5rem;
+  }
+}
