@@ -5,6 +5,7 @@
   --preto: #000;
   --azul-escuro: #1e1e2c;
   --lilas: #b19cd9;
+  --lilas-opaco: #b19cd96d;
 }
 
 *{
@@ -12,46 +13,67 @@
   margin: 0;
 }
 
-html, body{
-  width: 100vw !important;
-}
-
 body{
   background-color: var(--azul-escuro);
 }
 
-.card-about-main{
+body::-webkit-scrollbar{
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track{
+  background-color: var(--azul-escuro);
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: var(--lilas);
+  border-radius: 10px;
+}
+
+.card-sobre-principal{
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-top: 10rem;
+  margin-bottom: 2rem;
 
   width: 50%;
-  margin-bottom: 2rem;
   padding: 2rem;
   
-  background: rgba( 255, 255, 255, 0.05 );
-  box-shadow: 0 8px 60px 0 var(--lilas);
+  background: rgba( 255, 255, 255, 0.08 );
+  box-shadow: 0 8px 32px 0 var(--lilas-opaco);
   border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border: 1px solid var(--lilas-opaco);
 
   animation: emergeLeft .5s linear;
 }
 
-.card-about-main span{
+.card-sobre-principal span{
   padding: 2rem;
   flex-direction: row;
   color: var(--lilas);
   font-weight: 700;
   text-shadow: 1px 1px 1px var(--preto);
   font-family: 'Courier New', Courier, monospace;
-  transform: translateZ(200px);
 }
 
 #meteoro{
   animation: float 3s infinite;
-  transform: translateZ(200px);
+  filter: drop-shadow(0 0 0.75rem var(--azul-escuro));
+}
+
+.espaco-container{
+  display: flex;
+  height: 80vh;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#foguete{
+  animation: fly 5s infinite;
+  filter: drop-shadow(0 0 0.75rem var(--azul-escuro));
 }
 
 @keyframes emergeLeft{
@@ -72,18 +94,40 @@ body{
 	}
 }
 
+@keyframes fly {
+  0%{
+    rotate: 0deg;
+    transform: translateY(10%);
+    transform: translateX(10%);  
+  } 10%{
+    rotate: -80deg;
+    transform: translateY(50%);
+    transform: translateX(50%);
+  } 20%{
+    rotate: -100deg;
+    transform: translateY(70%);
+    transform: translateX(-70%);
+  } 50%{
+    rotate: -180deg;
+    transform: translateY(-90%);
+    transform: translateX(-90%);
+  } 100%{
+    rotate: 360deg;
+  }
+}
+
 @media screen and (max-width: 930px) {
-  .card-about-main{
+  .card-sobre-principal{
     width: 80%;
   }
 }
 
 @media screen and (max-width: 620px){
-  .card-about-main{
+  .card-sobre-principal{
     flex-direction: column;
   }
 
-  .card-about-main span{
+  .card-sobre-principal span{
     font-size: 1rem;
     font-weight: 700;
     padding: 0;
