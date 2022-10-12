@@ -43,12 +43,15 @@ body{
   padding: 2rem;
   flex-direction: row;
   color: var(--lilas);
-  font: 600 bold;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px var(--preto);
   font-family: 'Courier New', Courier, monospace;
+  transform: translateZ(200px);
 }
 
 #meteoro{
   animation: float 3s infinite;
+  transform: translateZ(200px);
 }
 
 @keyframes emergeLeft{
@@ -82,6 +85,7 @@ body{
 
   .card-about-main span{
     font-size: 1rem;
+    font-weight: 700;
     padding: 0;
     padding-top: .5rem;
   }
