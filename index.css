@@ -15,6 +15,7 @@
 
 body{
   background-color: var(--azul-escuro);
+  overflow: hidden;
 }
 
 body::-webkit-scrollbar{
@@ -103,11 +104,11 @@ body::-webkit-scrollbar-thumb{
   } 60%{
     rotate: -180deg;
     margin-left: 400px;
-    transform: translateY(20px);
+    transform: translateY(300px);
   } 80%{
     rotate: -90deg;
     margin-left: 100px;
-    transform: translateY(-20px);
+    transform: translateY(150px);
   } 100%{
     rotate: -180deg;
   }
