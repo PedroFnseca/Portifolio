@@ -73,7 +73,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 #foguete{
-  animation: fly 5s;
+  animation: fly 3s, float 2s infinite 3s forwards;
   filter: drop-shadow(0 0 0.75rem var(--azul-escuro));
 }
 
@@ -111,6 +111,14 @@ body::-webkit-scrollbar-thumb{
     transform: translateY(150px);
   } 100%{
     rotate: -360deg;
+  }
+}
+
+@keyframes disappear{
+  0%{
+    opacity: 1;
+  } 100%{
+    opacity: 0;
   }
 }
 
