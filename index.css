@@ -15,7 +15,7 @@
 
 body{
   background-color: var(--azul-escuro);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar{
@@ -73,7 +73,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 #foguete{
-  animation: fly 5s infinite alternate;
+  animation: fly 5s;
   filter: drop-shadow(0 0 0.75rem var(--azul-escuro));
 }
 
@@ -110,7 +110,7 @@ body::-webkit-scrollbar-thumb{
     margin-left: 100px;
     transform: translateY(150px);
   } 100%{
-    rotate: -180deg;
+    rotate: -360deg;
   }
 }
 
