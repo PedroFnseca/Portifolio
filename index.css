@@ -83,7 +83,6 @@ body::-webkit-scrollbar-thumb{
   font-size: 3rem;
   color: var(--lilas);
   text-shadow: 1px 1px 1px var(--preto);
-  animation: emergeLeft .5s, float 3s infinite .5s forwards;
 }
 
 .card-container{
@@ -120,6 +119,12 @@ body::-webkit-scrollbar-thumb{
   font-size: 1rem;
   font-weight: 700;
   font-family: 'Courier New', Courier, monospace;
+}
+
+#carouselExampleControls{
+  margin: 0 auto;
+  margin-top: 5rem;
+  width: 50rem;
 }
 
 @media screen and (max-width: 930px) {
