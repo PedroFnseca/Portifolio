@@ -76,7 +76,7 @@ body::-webkit-scrollbar-thumb{
   filter: drop-shadow(0 0 0.75rem var(--azul-escuro));
 }
 
-#title-linguagens{
+#title{
   margin-top: 5rem;
   text-align: center;
   font-family: 'Silkscreen', cursive;
@@ -181,7 +181,7 @@ body::-webkit-scrollbar-thumb{
     width: auto;
   }
 
-  #title-linguagens{
+  #title{
     font-size: 1.8rem;
   }
 }
